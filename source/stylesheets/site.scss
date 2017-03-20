@@ -164,6 +164,10 @@ body {
       @include position(relative);
       @include margin(0 0 2em);
       text-align: left;
+
+      .section-heading {
+        color: #27aae1;
+      }
     }
   }
 
