@@ -9,11 +9,14 @@ body {
 
   .menu {
     @include fill-parent();
+    height: 50px;
 
     .logo {
-      @include position(absolute, null null null 0);
+      @include position(relative, null null null null);
       @include size(150px auto);
-      @include margin(40px 0 0 30px);
+      @include margin(15px 0 0 30px);
+      @include transition(all 0.2s ease);
+      float: left;
       z-index: 100;
       -webkit-animation-name: logo;
       -webkit-animation-duration: .9s;
@@ -36,11 +39,16 @@ body {
           -webkit-transform: scale(1);
         }
       }
+
+      @include media($mobile) {
+        margin-left: 0px;
+        float: none;
+      }
     }
   }
 
   .hero {
-    @include size(100% 100vh);
+    @include size(100% 95vh);
     @include position(relative, 0 null null 0);
     @include margin(0 0 4em);
     background: image-url("images/pheros_bg.svg");
