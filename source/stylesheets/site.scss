@@ -3,3 +3,190 @@ body {
   text-align: center;
   font-size: 1em;
 }
+
+.index {
+  @include span-columns(12);
+
+  .menu {
+    @include fill-parent();
+
+    .logo {
+      @include position(absolute, null null null 0);
+      @include size(150px auto);
+      @include margin(40px 0 0 30px);
+      z-index: 100;
+      -webkit-animation-name: logo;
+      -webkit-animation-duration: .9s;
+
+      @-webkit-keyframes logo {
+        from {
+          -webkit-transform: scale(0);
+          opacity: 0;
+        }
+        50% {
+         -webkit-transform: scale(0);
+         opacity: 0;
+        }
+        82.5% {
+          -webkit-transform: scale(1.03);
+          -webkit-animation-timing-function: ease-out;
+          opacity: 1;
+        }
+        to {
+          -webkit-transform: scale(1);
+        }
+      }
+    }
+  }
+
+  .hero {
+    @include size(100% 100vh);
+    @include position(relative, 0 null null 0);
+    @include margin(0 0 4em);
+    background: image-url("images/pheros_bg.svg");
+    min-height: 500px;
+
+    .hero-text {
+      @include padding(35vh 0 0 0);
+      font-size: 2rem;
+      -webkit-animation-name: hero;
+      -webkit-animation-duration: .9s;
+      -webkit-animation-delay: .3s;
+
+      @-webkit-keyframes hero {
+        from {
+          -webkit-transform: scale(0);
+          opacity: 0;
+        }
+        50% {
+         -webkit-transform: scale(0);
+         opacity: 0;
+        }
+        82.5% {
+          -webkit-transform: scale(1.03);
+          -webkit-animation-timing-function: ease-out;
+          opacity: 1;
+        }
+        to {
+          -webkit-transform: scale(1);
+        }
+      }
+
+      @include media($mobile) {
+        @include padding(25vh 0 0 0);
+        @include span-columns(6);
+        @include shift(1);
+      }
+    }
+
+    #mc_embed_signup {
+      @include span-columns(8);
+      @include shift(2);
+      text-align: left;
+      -webkit-animation-name: signup;
+      -webkit-animation-duration: .9s;
+      -webkit-animation-delay: .6s;
+
+      @-webkit-keyframes signup {
+        from {
+          -webkit-transform: scale(0);
+          opacity: 0;
+        }
+        50% {
+         -webkit-transform: scale(0);
+         opacity: 0;
+        }
+        82.5% {
+          -webkit-transform: scale(1.03);
+          -webkit-animation-timing-function: ease-out;
+          opacity: 1;
+        }
+        to {
+          -webkit-transform: scale(1);
+        }
+      }
+
+      @include media($mobile) {
+        text-align: center;
+      }
+
+      input {
+        border-radius: 0px;
+      }
+
+      input[type="email"] {
+        border: 2px solid #fff;
+        @include transition(all 0.2s ease);
+        box-shadow: none;
+
+        &:focus {
+          border: 2px solid #27aae1;
+          box-shadow: none;
+        }
+      }
+
+      .promise {
+        font-size: .75rem;
+        color: #888;
+        font-weight: 100;
+        text-align: center;
+      }
+
+      .clear {
+        text-align: center;
+        @include margin(1.75em 0 0 0);
+
+        input {
+          background: #27aae1;
+          box-shadow: 10px 10px #1565D1;
+          @include transition(all 0.25s ease);
+
+          &:hover {
+            box-shadow: none;
+            background: #1565D1;
+          }
+        }
+      }
+    }
+  }
+
+  .section-wrapper {
+    @include span-columns(8);
+    @include shift(2);
+    @include position(relative);
+
+    @include media($mobile) {
+      @include span-columns(6);
+      @include shift(1);
+    }
+
+    .section {
+      @include position(relative);
+      @include margin(0 0 2em);
+      text-align: left;
+    }
+  }
+
+  .footer {
+    @include margin(50px 0 50px 0);
+    float: left;
+    width: 100%;
+
+    .logo {
+      @include size(150px auto);
+      @include margin(auto 0);
+    }
+
+    .copyright {
+      font-size: .75rem;
+    }
+
+    .social-media {
+      .social-icons {
+        @include size(30px 30px);
+        @include padding(4px);
+        @include margin(4px 2px);
+      }
+    }
+  }
+}
