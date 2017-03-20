@@ -34,6 +34,19 @@ end
 #   end
 # end
 
+activate :deploy do |deploy|
+  deploy.deploy_method        = :rsync
+  deploy.host          = 'root@pheros.co'
+  deploy.path          = '/var/www/pheros'
+  deploy.user          = 'root'
+  deploy.build_before  = true
+  # Optional Settings
+  # deploy.user  = 'tvaughan' # no default
+  # deploy.port  = 5309 # ssh port, default: 22
+  # deploy.clean = true # remove orphaned files on remote host, default: false
+  # deploy.flags = '-rltgoDvzO --no-p --del' # add custom flags, default: -avz
+end
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build

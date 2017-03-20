@@ -16,3 +16,5 @@ gem 'middleman-livereload', '~> 3.4'
 gem 'bitters'
 gem 'bourbon'
 gem 'neat'
+
+gem 'middleman-deploy', github: 'middleman-contrib/middleman-deploy', branch: 'master'
