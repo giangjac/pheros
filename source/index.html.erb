@@ -3,26 +3,29 @@ title: Welcome to Pheros
 ---
 
 <header class="menu">
-  <%= image_tag("images/icons/pheros_logo.svg", class: 'logo') %>
+  <%= image_tag("images/icons/pheros_logo.png", class: 'logo') %>
 </header>
 
 <div class="hero">
-  <h1 class="hero-text">
-    Help us make a happier, healthier world.
-  </h1>
+  <%= partial "carousel" %>
+</div>
+
+<div class="sub-hero">
   <div id="mc_embed_signup">
     <form action="//enteur.us4.list-manage.com/subscribe/post?u=7e59fc16929d1b5c11c18e4fe&amp;id=ebbdcf1f2d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
-        <div class="mc-field-group on-one">
-        	<label for="mce-EMAIL">Stay up-to-date on all things Pheros.</label>
-        	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your e-mail address...">
+        <div class="email-field">
+          <div class="mc-field-group on-one">
+          	<label for="mce-EMAIL">Help us make a happier, healthier world.</label>
+          	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your e-mail address...">
+          </div>
+          <label class="promise">We promise to respect your inbox!</label>
+        	<div id="mce-responses" class="clear">
+        		<div class="response" id="mce-error-response" style="display:none"></div>
+        		<div class="response" id="mce-success-response" style="display:none"></div>
+        	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7e59fc16929d1b5c11c18e4fe_ebbdcf1f2d" tabindex="-1" value=""></div>
         </div>
-        <label class="promise">We promise to respect your inbox!</label>
-      	<div id="mce-responses" class="clear">
-      		<div class="response" id="mce-error-response" style="display:none"></div>
-      		<div class="response" id="mce-success-response" style="display:none"></div>
-      	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7e59fc16929d1b5c11c18e4fe_ebbdcf1f2d" tabindex="-1" value=""></div>
         <div class="clear">
           <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
         </div>
@@ -30,56 +33,3 @@ title: Welcome to Pheros
     </form>
   </div>
 </div>
-
-<div class="section-wrapper">
-  <div class="section">
-    <h2 class="section-heading">
-      SCENT IS POWERFUL
-    </h2>
-    <p class="section-text">
-      Scent is the strongest sense linked to memory. New research shows it can also alter our mood and behaviors by tapping into strong instincts developed in mammals which are used to find mates, search for food, detect danger, and also, to interact socially. Using these communication aromas, Pheros can develop naturally occuring, safe, and affordable tools that improve social interactions, productivity, and well-being.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2 class="section-heading">
-      WE ARE PHEROS
-    </h2>
-    <p class="section-text">
-      To prove the astounding potential of this new class of pheromone technology, Pheros is ready to produce Focus, a crowdsourced blend of scents that are found on the human body supporting strong and rapid feeling of motivation, wakefulness, and focus. Apply two sprays, like any cologne or perfume, and you can experience several hours of honed-in, innate productivity. When you’re done, simply wash the scent off with soap and water and the effects will end, unlike caffeine or prescription medication. Best of all, our ingredients are Generally Regarded as Safe (GRAS) by the U.S. FDA.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2 class="section-heading">
-      THE GOAL
-    </h2>
-    <p class="section-text">
-      Pheros will launch an Indiegogo on April 26, 2017 to produce our first crowdsourced product, Focus. In August 2017, we will begin shipping Focus to backers and begin designing new products designed for social comfort, confidence, and communication. There are currently over 100 potential compounds that humans detect, and we intend to explore them all.
-      <br> <br>
-      Subscribe to our mailing list and we will let you know when you can back this incredible and safe technology.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2 class="section-heading">
-      THE SCIENCE
-    </h2>
-    <p class="section-text">
-      Our product has been in development since 2011, but we aren’t alone. The ingredients in Pheros were studied by Harvard Medical Professor Stephen Liberles and Neuroscientist David Ferrero, who noticed mammals would vigilantly respond to certain compounds through a type of receptor in their nose called TAAR. At Pheros, we adapted this research, and many others, to make a completely safe, easy to use, and amazingly effective technology for productivity and focus.
-    </p>
-  </div>
-</div>
-
-<footer class="footer">
-  <%= image_tag("images/icons/pheros_logo.svg", class: "logo") %>
-  <p class="copyright">© Copyrighted by Pheros, Inc. 2016</p>
-  <div class="social-media">
-    <a href="mailto:thom@pheros.co">
-      <%= image_tag("images/icons/envelope_icon.svg", class: "social-icons") %>
-    </a>
-    <a href="https://www.instagram.com/pheros_co/" target="_blank">
-      <%= image_tag("images/icons/instagram_icon.svg", class: "social-icons") %>
-    </a>
-  </div>
-</footer>

@@ -1,20 +1,26 @@
+$white: #FFFFFF;
+
 body {
-  background: #FFFFFF;
+  background: $white;
   text-align: center;
   font-size: 1em;
 }
 
 .index {
-  @include span-columns(12);
+  @include span-columns(10);
+  @include shift(1);
+  background-image: -webkit-linear-gradient(top, #5492a5, #e3dcdc);
 
   .menu {
     @include fill-parent();
-    height: 50px;
+    @include position(absolute, null null null 0);
+    background: $white;
+    z-index: 100;
 
     .logo {
       @include position(relative, null null null null);
-      @include size(150px auto);
-      @include margin(15px 0 0 30px);
+      @include size(100px auto);
+      @include margin(15px 0 15px 30px);
       @include transition(all 0.2s ease);
       float: left;
       z-index: 100;
@@ -48,16 +54,34 @@ body {
   }
 
   .hero {
-    @include size(100% 95vh);
+    @include size(100% 75vh);
+    @include margin(75px 0 25px 0);
+
+    #info-carousel {
+      height: 75vh;
+      min-height: 300px;
+      background: $white;
+
+      .carousel-control {
+        background: none;
+      }
+    }
+  }
+
+  .sub-hero {
+    @include size(100% 25vh);
     @include position(relative, 0 null null 0);
-    @include margin(0 0 4em);
-    background: image-url("images/pheros_bg.svg");
-    min-height: 500px;
+    @include margin(0 0 0 0);
+    background: #fed27b;
+    min-height: 90px;
 
     .hero-text {
+      @include span-columns(10);
+      @include shift(1);
       visibility: hidden;
-      @include padding(35vh 0 0 0);
-      font-size: 2rem;
+      @include padding(5vh 0 0 0);
+      font-size: 3.5rem;
+      color: #0e679e;
       -webkit-animation-name: hero;
       -webkit-animation-duration: .9s;
       -webkit-animation-delay: .3s;
@@ -92,8 +116,8 @@ body {
 
     #mc_embed_signup {
       visibility: hidden;
-      @include span-columns(8);
-      @include shift(2);
+      @include span-columns(10);
+      @include shift(1);
       text-align: left;
       -webkit-animation-name: signup;
       -webkit-animation-duration: .9s;
@@ -139,25 +163,32 @@ body {
         }
       }
 
-      .promise {
-        font-size: .75rem;
-        color: #888;
-        font-weight: 100;
-        text-align: center;
-      }
+      #mc_embed_signup_scroll {
+        .email-field {
+          @include span-columns(8 of 12);
 
-      .clear {
-        text-align: center;
-        @include margin(1.75em 0 0 0);
+          .promise {
+            font-size: .75rem;
+            color: #888;
+            font-weight: 100;
+            text-align: center;
+          }
+        }
 
-        input {
-          background: #27aae1;
-          box-shadow: 10px 10px #1565D1;
-          @include transition(all 0.25s ease);
+        .clear {
+          text-align: center;
+          @include margin(1.75em 0 0 0);
+          @include span-columns(4 of 12);
 
-          &:hover {
-            box-shadow: none;
-            background: #1565D1;
+          input {
+            background: #27aae1;
+            box-shadow: 10px 10px #1565D1;
+            @include transition(all 0.25s ease);
+
+            &:hover {
+              box-shadow: none;
+              background: #1565D1;
+            }
           }
         }
       }
@@ -187,12 +218,11 @@ body {
 
   .footer {
     @include margin(50px 0 50px 0);
-    float: left;
     width: 100%;
 
     .logo {
-      @include size(150px auto);
-      @include margin(auto 0);
+      @include size(100px auto);
+      @include margin(0 0 0 5px);
     }
 
     .copyright {
