@@ -17,10 +17,12 @@ body {
   @include span-columns(9);
   @include shift(1.5);
   background-image: -webkit-linear-gradient(top, $bg_blue, $bg_pink);
+  height: 100vh;
 
   @include media($wide-desktop) {
-    @include span-columns(6);
-    @include shift(3);
+    @include span-columns(8);
+    @include shift(2);
+    height: 100%;
   }
 
   @include media($mobile) {
@@ -103,6 +105,11 @@ body {
         min-height: 600px;
       }
 
+      @include media($wide-desktop) {
+        min-height: 900px;
+        max-height: 65vh;
+      }
+
       .section {
         @include margin(0 0 2em);
         text-align: left;
@@ -116,6 +123,12 @@ body {
             @include span-columns(6);
             @include shift(1);
           }
+
+          @include media($wide-desktop) {
+            @include span-columns(7.5 of 12);
+            max-height: 700px;
+            max-width: 700px;
+          }
         }
 
         .text-wrapper {
@@ -128,14 +141,28 @@ body {
             margin-top: 0px;
           }
 
+          @include media($wide-desktop) {
+            @include span-columns(4.5 of 12);
+            margin-top: 80px;
+            margin-left: -50px;
+          }
+
           .section-heading {
             font-size: 2.5rem;
             font-weight: bold;
             color: $blue;
+
+            @include media($wide-desktop) {
+              font-size: 4rem;
+            }
           }
 
           .section-text {
             font-size: 1.1rem;
+
+            @include media($wide-desktop) {
+              font-size: 2rem;
+            }
           }
         }
       }
@@ -149,11 +176,20 @@ body {
             top: 50%;
             z-index: 5;
             display: inline-block;
+
+            @include media($wide-desktop) {
+              font-size: 40px;
+            }
           }
         }
 
         .left {
           left: -110px;
+
+          @include media($wide-desktop) {
+            width: auto;
+            left: -85px;
+          }
 
           @include media($mobile) {
             width: auto;
@@ -163,6 +199,11 @@ body {
 
         .right {
           right: -110px;
+
+          @include media($wide-desktop) {
+            width: auto;
+            right: -45px;
+          }
 
           @include media($mobile) {
             width: auto;
@@ -180,6 +221,12 @@ body {
           border: 1px solid $blue;
           @include size(7px 7px);
           @include margin(0 1px);
+
+          @include media($wide-desktop) {
+            border: 1px solid $blue;
+            @include size(14px 14px);
+            @include margin(0 3px);
+          }
         }
       }
     }
@@ -218,6 +265,12 @@ body {
 
     @include media($mobile) {
       height: 190px;
+    }
+
+    @include media($wide-desktop) {
+      height: 15vh;
+      min-height: 180px;
+      max-height: 200px;
     }
 
     .hero-text {
@@ -262,6 +315,10 @@ body {
       #mc_embed_signup_scroll {
         margin-top: 15px;
 
+        @include media($wide-desktop) {
+          margin-top: 30px;
+        }
+
         .email-field {
           @include span-columns(10 of 12);
           font-size: 1.25rem;
@@ -269,6 +326,10 @@ body {
 
           @include media($mobile) {
             @include span-columns(8);
+          }
+
+          @include media($wide-desktop) {
+            font-size: 2rem;
           }
 
           .promise {
@@ -290,6 +351,10 @@ body {
             margin-top: 0.75em;
           }
 
+          @include media($wide-desktop) {
+            margin-top: 34px;
+          }
+
           input {
             height: 35px;
             margin-top: 5px;
@@ -300,6 +365,12 @@ body {
 
             @include media($mobile) {
               float: none;
+            }
+
+            @include media($wide-desktop) {
+              height: 54px;
+              width: 85%;
+              font-size: 1.5rem;
             }
 
             &:hover {
