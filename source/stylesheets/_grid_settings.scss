@@ -5,11 +5,13 @@ $gutter: 36px !default;
 $grid-columns: 12 !default;
 $max-width: 100% !global;
 
-$small-screen: 900px;
+$small-screen: 850px;
+$medium-screen: 1200px;
 
 // Breakpoints
 $mobile: new-breakpoint(max-width $small-screen 8); // > 900
 $desktop: new-breakpoint(min-width $small-screen + 1 12); // 900 >
+$wide-desktop: new-breakpoint(min-width $medium-screen + 1 12);
 
 $visual-grid: false;
 $visual-grid-color: black;
