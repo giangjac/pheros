@@ -17,7 +17,7 @@ body {
   @include span-columns(9);
   @include shift(1.5);
   background-image: -webkit-linear-gradient(top, $bg_blue, $bg_pink);
-  height: 100vh;
+  min-height: 100vh;
 
   @include media($wide-desktop) {
     @include span-columns(8);
